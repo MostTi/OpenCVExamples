@@ -1,0 +1,3 @@
+/home/teemo/openCV_ws/overlay_video/CMakeFiles/rebuild_cache.dir
+/home/teemo/openCV_ws/overlay_video/CMakeFiles/overlay_video.dir
+/home/teemo/openCV_ws/overlay_video/CMakeFiles/edit_cache.dir

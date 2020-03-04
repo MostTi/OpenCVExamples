@@ -1,0 +1,3 @@
+/home/teemo/openCV_ws/face/CMakeFiles/rebuild_cache.dir
+/home/teemo/openCV_ws/face/CMakeFiles/face.dir
+/home/teemo/openCV_ws/face/CMakeFiles/edit_cache.dir

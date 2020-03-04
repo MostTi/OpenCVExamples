@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( overlay_video )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( overlay_video overlay_video.cpp )
+target_link_libraries( overlay_video ${OpenCV_LIBS} )

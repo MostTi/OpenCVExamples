@@ -1,0 +1,3 @@
+/home/teemo/openCV_ws/resize/CMakeFiles/rebuild_cache.dir
+/home/teemo/openCV_ws/resize/CMakeFiles/resize.dir
+/home/teemo/openCV_ws/resize/CMakeFiles/edit_cache.dir

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( fourier_video )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( fourier_video fourier_video.cpp )
+target_link_libraries( fourier_video ${OpenCV_LIBS} )
