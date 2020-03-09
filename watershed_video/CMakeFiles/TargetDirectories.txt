@@ -1,3 +1,0 @@
-/home/teemo/openCV_ws/watershed_video/CMakeFiles/rebuild_cache.dir
-/home/teemo/openCV_ws/watershed_video/CMakeFiles/watershed_video.dir
-/home/teemo/openCV_ws/watershed_video/CMakeFiles/edit_cache.dir

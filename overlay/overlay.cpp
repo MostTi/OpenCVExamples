@@ -31,10 +31,10 @@ int main(int argc, char** argv)
         Canny(frameBlurred, frameCanny,50,150);                    
 
         //Merge Images
-        frameOriginal.copyTo( merged, frameCanny); // copy part of src image according the canny output, canny is used as mask
+        frameOriginal.copyTo( merged, frameCanny); // copy all Pixels where Canny frame is white (Use as mask)
         cvtColor(frameCanny, frameCanny, CV_GRAY2BGR); // convert canny image to bgr
-        addWeighted( frameOriginal, 0.5, frameCanny, 0.5, 0.0, addweight); // blend src image with canny image
-        frameOriginal += frameCanny; // add src image with canny image
+        addWeighted( frameOriginal, 0.5, frameCanny, 0.5, 0.0, addweight); // blend src frame with canny frame
+        frameOriginal += frameCanny; // add src frame with canny frame
 
         rdata.tend[i] = rdtscp(); //take end timestamp
     }

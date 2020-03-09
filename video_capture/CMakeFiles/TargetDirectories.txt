@@ -1,3 +1,0 @@
-/home/teemo/openCV_ws/video_capture/CMakeFiles/rebuild_cache.dir
-/home/teemo/openCV_ws/video_capture/CMakeFiles/Videocapture.dir
-/home/teemo/openCV_ws/video_capture/CMakeFiles/edit_cache.dir

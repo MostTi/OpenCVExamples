@@ -1,3 +1,0 @@
-/home/teemo/openCV_ws/hello_world/CMakeFiles/rebuild_cache.dir
-/home/teemo/openCV_ws/hello_world/CMakeFiles/DisplayImage.dir
-/home/teemo/openCV_ws/hello_world/CMakeFiles/edit_cache.dir

@@ -1,3 +1,0 @@
-/home/teemo/openCV_ws/fourier_video/CMakeFiles/rebuild_cache.dir
-/home/teemo/openCV_ws/fourier_video/CMakeFiles/fourier_video.dir
-/home/teemo/openCV_ws/fourier_video/CMakeFiles/edit_cache.dir

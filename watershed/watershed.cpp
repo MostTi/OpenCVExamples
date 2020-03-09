@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
                 }
             }
         }
+
         // Show output image
         imshow("Black Background Image", src);
         // Create a kernel that we will use to sharpen our image
@@ -55,19 +56,22 @@ int main(int argc, char *argv[])
         // so the possible negative number will be truncated
         Mat imgLaplacian;
         filter2D(src, imgLaplacian, CV_32F, kernel);
+        
         Mat sharp;
         src.convertTo(sharp, CV_32F);
         Mat imgResult = sharp - imgLaplacian;
         // convert back to 8bits gray scale
         imgResult.convertTo(imgResult, CV_8UC3);
         imgLaplacian.convertTo(imgLaplacian, CV_8UC3);
-        // imshow( "Laplace Filtered Image", imgLaplacian );
+        imshow( "Laplace Filtered Image", imgLaplacian );
         imshow( "New Sharped Image", imgResult );
+
         // Create binary image from source image
         Mat bw;
         cvtColor(imgResult, bw, COLOR_BGR2GRAY);
         threshold(bw, bw, 40, 255, THRESH_BINARY | THRESH_OTSU);
         imshow("Binary Image", bw);
+
         // Perform the distance transform algorithm
         Mat dist;
         distanceTransform(bw, dist, DIST_L2, 3);
@@ -82,6 +86,8 @@ int main(int argc, char *argv[])
         Mat kernel1 = Mat::ones(3, 3, CV_8U);
         dilate(dist, dist, kernel1);
         imshow("Peaks", dist);
+
+
         // Create the CV_8U version of the distance image
         // It is needed for findContours()
         Mat dist_8u;
@@ -100,6 +106,8 @@ int main(int argc, char *argv[])
         circle(markers, Point(5,5), 3, Scalar(255), -1);
         imshow("Markers", markers*10000);
         // Perform the watershed algorithm
+
+        //Eigentliche Funktion
         watershed(imgResult, markers);
         Mat mark;
         markers.convertTo(mark, CV_8U);
@@ -115,6 +123,8 @@ int main(int argc, char *argv[])
             int r = theRNG().uniform(0, 256);
             colors.push_back(Vec3b((uchar)b, (uchar)g, (uchar)r));
         }
+
+
         // Create the result image
         dst = Mat::zeros(markers.size(), CV_8UC3);
         // Fill labeled objects with random colors
